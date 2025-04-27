@@ -19,6 +19,8 @@ class HVAdam(Optimizer):
             raise ValueError("Invalid learning rate: {}".format(lr))
         if not 0.0 <= eps:
             raise ValueError("Invalid epsilon value: {}".format(eps))
+        if not 0.0 <= gamma:
+            raise ValueError("Invalid epsilon value: {}".format(gamma))
         if not 0.0 <= betas[0] < 1.0:
             raise ValueError("Invalid beta parameter at index 0: {}".format(betas[0]))
         if not 0.0 <= betas[1] < 1.0:
